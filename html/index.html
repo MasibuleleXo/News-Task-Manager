@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JAVASCRIP TAG -->
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdown");
+            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+
+            // // Add the following lines to set the URL when the dropdown is displayed
+            // if (dropdown.style.display === "block") {
+            //     window.location.href = "/html/options.html"; // Replace with your actual target page URL
+            // }
+        }
+    </script>
+    <link rel="stylesheet" href="/html/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <title>News To do</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="header-options">
+
+            <button class="options-button"> <i class="fas fa-bars"></i></button>
+            <button class="settings-button"><i class="fas fa-cog"></i></button>
+        </div>
+    </div>
+
+    <div class="user-info">
+        <div class="user-details">
+            <span class="user-name">Quan, </span>
+            <p class="welcome-text">Welcome</p>
+
+            <div class="tasks-info">
+                <p class="tasks-pending">5 tasks pending</p>
+            </div>
+        </div>
+        <div class="profile-picture">
+            <!-- Assuming you have a profile picture URL -->
+            <img src="/pictures/Q-one 20231205_123241.jpg" alt="Profile">
+        </div>
+
+
+    </div>
+    <div class="search-section">
+        <input type="text" placeholder="Search tasks...">
+    </div>
+    <!-- ongoing tasks section -->
+    <div class="combined-section">
+        <div class="ongoing-tasks-section">
+            <div class="ongoing-tasks-header">
+                <span>Ongoing Tasks</span>
+                <div class="see-all">
+                    <span>See All</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <!-- Add your ongoing tasks content here -->
+        </div>
+
+        <div class="rectangles-section">
+            <div class="rectangle" style="background-color: #ffcc66;">
+                <i class="fas fa-ellipsis-v"></i>
+
+                <div class="rectangle">
+                    <div class="topic">Breaking News</div>
+                    <div class="divider"></div>
+                    <div class="bottom-section">
+                        <div class="profile-pictures">
+                            <img src="/pictures/Q-one 20231205_123241.jpg" alt="Profile 1">
+                            <img src="/pictures/images (2).jpeg" alt="Profile 2">
+                            <img src="/pictures/61fbf0947ba91177227494.jpg" alt="Profile 3">
+
+                        </div>
+                        <div class="due-date">
+                            <!--<i class="fas fa-clock"></i>  -->
+                            <span>
+                                Due: 12/15 09:00 AM
+                                <p>Task 5</p>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rectangle" style="background-color: #66ccff;">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+            <div class="rectangle" style="background-color: #cc66ff;">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Progress Section -->
+    <div class="additional-section">
+        <div class="progress-rectangle" style="background-color: #a3d2ca;">
+            <div class="progress-text">Progress</div>
+            <div class="percentage-circle">
+                <span class="percentage">62%</span>
+            </div>
+            <div class="progress-details">
+                <div class="left-details">
+                    <span class="completion-text">20% last week</span>
+                </div>
+                <div class="right-details">
+                    <div class="frequency-bars">
+                        <div class="bar" style="height: 80%; background-color: #161817;"></div>
+                        <div class="bar" style="height: 60%; background-color: #0f0f0f;"></div>
+                        <div class="bar" style="height: 70%; background-color: #0b0c0c;"></div>
+                        <div class="bar" style="height: 50%; background-color: #0d0e0d;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="projects-rectangle" style="background-color: #f4d160;">
+                <div class="projects-text">10+ Projects</div>
+                <div class="frequency-bars larger-bars">
+                    <div class="bar" style="height: 70%; background-color: #0c0c0b;"></div>
+                    <div class="bar" style="height: 80%; background-color: #0f0f0f;"></div>
+                    <div class="bar" style="height: 90%; background-color: #0e0d0d;"></div>
+                    <div class="bar" style="height: 60%; background-color: #0a0a0a;"></div>
+                </div>
+
+            </div>
+            <div class="clients-rectangle" style="background-color: #e0d4ad;">
+                <div class="projects-text">100+ Clients</div>
+                <div class="frequency-bars larger-bars">
+                    <div class="bar" style="height: 70%; background-color: #0c0c0b;"></div>
+                    <div class="bar" style="height: 80%; background-color: #0f0f0f;"></div>
+                    <div class="bar" style="height: 90%; background-color: #0e0d0d;"></div>
+                    <div class="bar" style="height: 60%; background-color: #0a0a0a;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION BAR -->
+    <div class="navigation-bar">
+        <div class="nav-button">
+            <i class="fas fa-home"></i>
+            <span class="button-text">Home</span>
+        </div>
+
+        <div class="nav-button">
+            <i class="fas fa-user"></i>
+            <span class="button-text">Profile</span>
+        </div>
+
+        <div class="nav-button">
+            <div class="add-task-button">
+                <i class="fas fa-plus"></i>
+                <span class="add-task-text">Add new Task</span>
+            </div>
+        </div>
+
+        <div class="nav-button">
+            <i class="fas fa-calendar"></i>
+            <span class="button-text">Calendar</span>
+        </div>
+
+
+        <div class="alert-button">
+            <i class="fas fa-bell"></i>
+            <span class="alert-text">Alert</span>
+        </div>
+    </div>
+    <!-- OPTIONS BUTTON -->
+
+    <div class="options-button" onclick="toggleDropdown()">
+        Options
+    </div>
+
+    <div class="dropdown" id="dropdown">
+        <div class="profile-info">
+            <div class="profile-details">
+                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                <div class="user-details">
+                    <div class="fullname">John Doe</div>
+                    <div class="email">john.doe@example.com</div>
+                </div>
+            </div>
+            <div class="menu-options">
+                <button><i class="fas fa-chart-bar"></i> Dashboard</button>
+                <button><i class="fas fa-users"></i> Collaboration</button>
+                <button><i class="fas fa-paperclip"></i> Attachments</button>
+                <button><i class="fas fa-chart-line"></i> Track Progress</button>
+                <button><i class="fas fa-calendar-day"></i> Due Dates</button>
+                <button><i class="fas fa-chart-pie"></i> Analysis</button>
+                <button><i class="fas fa-tasks"></i> Today's Tasks</button>
+                <button><i class="fas fa-user-friends"></i> Users</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

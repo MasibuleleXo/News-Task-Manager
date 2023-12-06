@@ -1,0 +1,530 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Make the header options span the entire width */
+}
+
+
+/* buttons */
+
+.options-button,
+.settings-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.options-button:hover,
+.settings-button:hover {
+    background-color: #ddd;
+    /* Add a background color on hover for visual feedback */
+}
+
+.options-button {
+    margin-right: auto;
+    /* Push the options button to the left */
+}
+
+.settings-button {
+    margin-left: auto;
+    /* Push the settings button to the right */
+}
+
+
+/* Style for Font Awesome icons */
+
+i.fas {
+    font-size: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+
+/* USER INFORMATION */
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    /* Black background color */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Add some padding for better spacing */
+    margin-top: 10px;
+    /* Adjust the margin as needed */
+    margin-right: 20px;
+    /* Ensure the right margin aligns with the settings button */
+    margin-left: 10px;
+}
+
+.user-details {
+    margin-right: auto;
+    /* Push the user details to the left */
+}
+
+.user-name {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    width: 195px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    /* font-weight: bold; */
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.profile-picture img {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-left: 10px;
+    /* Add margin to separate the profile picture */
+}
+
+.tasks-info {
+    padding-bottom: 5px;
+}
+
+.tasks-pending {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.search-section {
+    display: flex;
+    position: centre;
+    /* Position the search section absolutely within the user info */
+    top: 50%;
+    /* Align the top of the search section to the middle of the user info */
+    transform: translateY(-50%);
+    /* Adjust to center vertically */
+    right: 0;
+    /* Align to the right edge of the user info */
+    /* background-color: #ccc; */
+    /* Grey background color for the search section */
+    border-radius: 31px;
+    /* Rounded corners */
+    padding: 5px;
+    /* Add padding for better spacing */
+    /* Box shadow effect */
+}
+
+.search-section input {
+    width: calc(80% - 10px);
+    display: flex;
+    /* Set the input width to fill the search section */
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 31px;
+    margin-left: 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Rounded corners for the input */
+}
+
+
+/* ONGOING TASKS SECTION */
+
+.combined-section {
+    display: flex;
+    flex-direction: column;
+    /* Arrange the sections vertically */
+    margin-top: 0px;
+}
+
+.ongoing-tasks-section {
+    padding: 20px;
+    background-color: #fff;
+    /* White background color for the section */
+    border-radius: 10px;
+    /* Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* Box shadow effect */
+    margin-bottom: 10px;
+}
+
+.ongoing-tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.see-all {
+    display: flex;
+    align-items: center;
+    color: #555;
+    /* Greyish color for the "See All" text */
+}
+
+.see-all span {
+    margin-right: 5px;
+}
+
+.rectangles-section {
+    display: flex;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    padding: 10px;
+}
+
+.rectangle {
+    width: 235px;
+    height: 140px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    /* Add some margin between rectangles */
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rectangle i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #555;
+    /* Greyish color for the 3 dots icon */
+}
+
+
+/* RECTANGLE CONTENTS */
+
+.topic {
+    width: 105px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    /* Add margin for spacing */
+    overflow: hidden;
+    /* Hide overflow if text is too long */
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    /* Greyish color for the divider line */
+    margin: 10px 0;
+    /* Add margin for spacing */
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-pictures {
+    padding-left: 20px;
+    display: flex;
+    gap: -15%;
+    /* margin-right: 10px; */
+}
+
+.profile-pictures img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: -10px;
+    /* Adjust to overlap the images */
+}
+
+.due-date {
+    display: flex;
+    align-items: center;
+}
+
+.due-date i {
+    margin-right: 5px;
+    font-style: bold;
+}
+
+.due-date span {
+    font-size: 12px;
+}
+
+.due-date p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* PROGRESS SECTION */
+
+.additional-section {
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+    /* Add some gap between rectangles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-rectangle,
+.projects-rectangle {
+    width: 170px;
+    height: 260px;
+    flex-shrink: 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projects-rectangle {
+    width: 150px;
+    height: 105px;
+    flex-shrink: 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: -ms-page
+}
+
+.clients-rectangle {
+    width: 150px;
+    height: 105px;
+    flex-shrink: 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: -ms-page
+}
+
+.progress-rectangle {
+    width: 176px;
+    height: 281px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+    /* Add relative positioning to the container */
+}
+
+.percentage-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #8a8080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgb(255, 255, 255);
+    position: absolute;
+    /* Set absolute positioning */
+    top: 50%;
+    /* Move the circle 50% down from the top */
+    left: 50%;
+    /* Move the circle 50% from the left */
+    transform: translate(-50%, -50%);
+    /* Center the circle */
+}
+
+.percentage {
+    font-size: 24px;
+    color: #f0f0f0;
+    position: relative;
+}
+
+.progress-details {
+    display: flex;
+    position: absolute;
+}
+
+.left-details {
+    flex-grow: 1;
+}
+
+.completion-text {
+    padding-top: 230px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    padding-right: 10px;
+}
+
+.right-details {
+    margin-left: 10px;
+}
+
+.frequency-bars {
+    display: flex;
+    flex-direction: column;
+}
+
+.frequency-bars .bar {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.larger-bars .bar {
+    height: 100%;
+}
+
+
+/* NAVIGATION BAR */
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Small shadow below the navigation bar */
+    padding: 10px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.button-text {
+    font-size: 12px;
+}
+
+.add-task-button:hover .add-task-text {
+    display: block;
+}
+
+.add-task-text {
+    display: none;
+    font-size: 12px;
+}
+
+.alert-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.alert-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.alert-text {
+    font-size: 12px;
+}
+
+
+/* OPTIONS DROPDOWB___________________OPTIINS DROPDOWN */
+
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-info {
+    padding: 20px;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.fullname {
+    font-weight: bold;
+}
+
+.email {
+    color: #888;
+}
+
+.menu-options {
+    margin-top: 20px;
+}
+
+.menu-options button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu-options button i {
+    margin-right: 10px;
+}
