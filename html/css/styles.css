@@ -467,7 +467,7 @@ i.fas {
 }
 
 
-/* OPTIONS DROPDOWB___________________OPTIINS DROPDOWN */
+/* OPTIONS DROPDOWB___________________OPTIINS DROPDOWN*/
 
 .dropdown {
     display: none;
@@ -482,49 +482,71 @@ i.fas {
     overflow: hidden;
 }
 
-.profile-info {
-    padding: 20px;
+
+/* DROPDOWNS */
+
+
+/* .dropdown-container {
+    position: relative;
+} */
+
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s ease-out;
 }
 
-.profile-details {
-    display: flex;
-    align-items: center;
-}
-
-.profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.fullname {
-    font-weight: bold;
-}
-
-.email {
-    color: #888;
-}
-
-.menu-options {
-    margin-top: 20px;
-}
-
-.menu-options button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: none;
-    background-color: #fff;
-    width: 100%;
+.options-button,
+.settings-button {
     cursor: pointer;
 }
 
-.menu-options button i {
-    margin-right: 10px;
+
+/* Adjust the width and styles based on your design preferences */
+
+#optionsDropdown {
+    left: 0;
+    background-color: #ffffffc5;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
+
+#settingsDropdown {
+    background-color: #ffffffc5;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.dropdownProfile {
+    padding-top: 50px;
+    background-color: #000;
+    height: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.space {
+    height: 50px;
+    border-top-right-radius: 20px;
+}
+
+.dropdownPicture img {
+    position: inherit;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.profile-contents {
+    padding-top: 1px;
+    /* position: absolute; */
+    display: inline;
+}
+
+
+/* Other styles for your buttons and dropdown content go here */

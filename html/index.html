@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JAVASCRIP TAG -->
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdown");
-            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    <!-- dropdown javascript -->
 
-            // // Add the following lines to set the URL when the dropdown is displayed
-            // if (dropdown.style.display === "block") {
-            //     window.location.href = "/html/options.html"; // Replace with your actual target page URL
-            // }
+    <script>
+        function toggleDropdown(dropdownType) {
+            var dropdown = document.getElementById(dropdownType + "Dropdown");
+
+            // Hide all dropdowns initially
+            document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+                dropdown.style.display = "none";
+            });
+
+            // Toggle the display of the selected dropdown
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                // Open the selected dropdown with a delay to allow hiding animation to complete
+                setTimeout(function() {
+                    dropdown.style.display = "block";
+                }, 300);
+            }
         }
     </script>
+
     <link rel="stylesheet" href="/html/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -25,13 +36,45 @@
 </head>
 
 <body>
-    <div class="header-container">
-        <div class="header-options">
 
-            <button class="options-button"> <i class="fas fa-bars"></i></button>
-            <button class="settings-button"><i class="fas fa-cog"></i></button>
+    <div class="header-container">
+
+        <div class="header-options">
+            <button class="options-button" onclick="toggleDropdown('options')">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="dropdown" id="optionsDropdown">
+                <div class="space"></div>
+                <div class="dropdownProfile" id="dropdownProfile">
+                    <div class="profile-contents">
+                        <h2>Quan Dambuza</h2>
+                        <p>quan@pondolandtimes.co.za</p>
+                        <div class="dropdownPicture">
+                            <img src="/pictures/Q-one 20231205_123241.jpg" alt="dropdown-picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="settings-button" onclick="toggleDropdown('settings')">
+                <i class="fas fa-cog"></i>
+                
+                <div class="settingsDropdown" id="settingsDropdownContainer">
+
+                    <div class="dropdown" id="settingsDropdownContent">
+                        <h1>Testing settings</h1>
+                        <!-- Dropdown content for Settings -->
+                        <!-- Include the content you want for the Settings dropdown here -->
+                   
+                    </div>
+                </div>
+            </button>
+
+
         </div>
     </div>
+
 
     <div class="user-info">
         <div class="user-details">
@@ -174,9 +217,34 @@
             <span class="alert-text">Alert</span>
         </div>
     </div>
-    <!-- OPTIONS BUTTON -->
+    <!--DROPDOWN FOR OPTIONS AND SETTINGS -->
 
-    <div class="options-button" onclick="toggleDropdown()">
+
+    <!-- <div class="dropdown-container">
+        <div class="options-button" onclick="toggleDropdown('options')">
+            Options
+        </div>
+
+        <div class="settings-button" onclick="toggleDropdown('settings')">
+            Settings
+        </div>
+
+        <div class="dropdown" id="optionsDropdown">
+            Dropdown content for Options -->
+    <!-- Include the content you want for the Options dropdown here -->
+
+
+
+    </div>
+
+    <div class="dropdown" id="settingsDropdown">
+        <!-- Dropdown content for Settings -->
+        <!-- Include the content you want for the Settings dropdown here -->
+    </div>
+    </div>
+
+
+    <!-- <div class="options-button" onclick="toggleDropdown()">
         Options
     </div>
 
@@ -200,7 +268,7 @@
                 <button><i class="fas fa-user-friends"></i> Users</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </body>
 
