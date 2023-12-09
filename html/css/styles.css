@@ -3,6 +3,7 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
+    background-color: #f5f3f3;
 }
 
 .header-container {
@@ -23,6 +24,9 @@ body {
 
 /* buttons */
 
+
+/* OPTIONS BUTTONS */
+
 .options-button,
 .settings-button {
     background-color: transparent;
@@ -41,6 +45,66 @@ body {
     /* Push the options button to the left */
 }
 
+
+/*  DROPDOWNs */
+
+.dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #ffffff00;
+    display: none;
+}
+
+.back-button {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff50;
+    background-color: #000;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details h2 {
+    margin: 0;
+}
+
+.black-container {
+    padding: 20px;
+    background-color: #fff9f9bb;
+}
+
+.option-button {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.option-button i {
+    margin-right: 10px;
+}
+
 .settings-button {
     margin-left: auto;
     /* Push the settings button to the right */
@@ -57,6 +121,27 @@ i.fas {
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
+}
+
+
+/* SETTINGS DROPDOWN */
+
+#settingsDropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    /* Align to the right side of the screen */
+    height: 100%;
+    width: 50%;
+    /* Adjust as needed, considering padding, margin, borders, etc. */
+    background-color: #ffffff;
+    /* Add your desired background color */
+}
+
+#settingsDropdown h1 {
+    margin-left: 20%;
 }
 
 
@@ -430,6 +515,8 @@ i.fas {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    background-color: white;
+    border: none;
 }
 
 .nav-button i {
@@ -504,6 +591,17 @@ i.fas {
     cursor: pointer;
 }
 
+.user-details,
+h2 {
+    color: #ffffff;
+}
+
+.user-details,
+p {
+    font-size: 8px;
+    color: #555;
+}
+
 
 /* Adjust the width and styles based on your design preferences */
 
@@ -546,6 +644,16 @@ i.fas {
     padding-top: 1px;
     /* position: absolute; */
     display: inline;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 
