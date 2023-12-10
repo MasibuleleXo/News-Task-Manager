@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        function goToSettingsPage() { // Add logic to navigate to the settings page //
+        }
+    </script>
+
+    <link rel="stylesheet" href="/html/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <title>tasks to-do</title>
+</head>
+
+<body>
+
+    <div class="profile-header">
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <!-- Settings Button -->
+        <button class="settings-button" onclick="goToSettingsPage()">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
+
+    <div class="profile-container">
+        <!-- Black Rectangle with Profile Picture and Information -->
+        <div class="profile-info">
+            <div class="profile-picture">
+                <img src="/pictures/Q-one 20231205_123241.jpg" alt="Profile Picture">
+            </div>
+            <h2>Quan Dambuza</h2>
+            <p>Chief Editor</p>
+        </div>
+        <!-- User Contact Information Section -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>user@example.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>(123) 456-7890</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Street, City</p>
+            </div>
+            <!-- Add more contact information items as needed -->
+        </div>
+
+    </div>
+
+    <!-- Your other page content goes here -->
+
+
+
+
+</body>
+
+</html>

@@ -591,8 +591,8 @@ i.fas {
     cursor: pointer;
 }
 
-.user-details,
-h2 {
+.user-details h2 {
+    font-size: 15px;
     color: #ffffff;
 }
 
