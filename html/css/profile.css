@@ -78,3 +78,130 @@ body {
 .contact-item i {
     margin-right: 10px;
 }
+
+.profile-details {
+    background-color: #fffbfb;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 35px;
+    width: 300px;
+    height: 120px;
+    flex-shrink: 0;
+    box-shadow: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+
+/* CSS for Profile Details */
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 10px; */
+    border-radius: 20px;
+    width: 397px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.detail-item i {
+    font-size: 24px;
+    color: #000;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.detail-text {
+    margin-top: 20px;
+    margin-right: 20%;
+    flex-grow: 1;
+    /* Allow text to take up remaining space */
+    text-align: center;
+}
+
+.detail-text h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.detail-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* navigation  bar */
+
+
+/* navigation bar */
+
+.navigation-bar {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Small shadow below the navigation bar */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    /* Place the navigation bar at the bottom of the screen */
+    width: 100%;
+    /* Make the navigation bar full width */
+}
+
+
+/* Other styles remain the same */
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.nav-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.button-text {
+    font-size: 12px;
+}
+
+.add-task-button:hover .add-task-text {
+    display: block;
+}
+
+.add-task-text {
+    display: none;
+    font-size: 12px;
+}
+
+.alert-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.alert-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.alert-text {
+    font-size: 12px;
+}
