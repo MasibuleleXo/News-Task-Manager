@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <script src="main.js" defer>
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        function goToSettingsPage() { // Add logic to navigate to the settings page //
+        }
     </script>
 
     <link rel="stylesheet" href="/html/css/profile.css">
-    <link rel="stylesheet" href="/html/css/header.css">
-    <!-- <link rel="stylesheet" href="/html/css/homePage.css"> -->
-    <link rel="stylesheet" href="/html/css/navbar.css">
-    <link rel="stylesheet" href="/html/css/newTask.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -23,8 +25,17 @@
 
 <body>
 
+    <div class="profile-header">
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
 
-    <div id="header-section"></div>
+        <!-- Settings Button -->
+        <button class="settings-button" onclick="goToSettingsPage()">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
 
     <div class="profile-container">
         <!-- Black Rectangle with Profile Picture and Information -->
@@ -39,7 +50,7 @@
         <div class="contact-info">
             <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <p>quan@pondolandtimes.co.za</p>
+                <p>user@example.com</p>
             </div>
             <div class="contact-item">
                 <i class="fas fa-phone"></i>
@@ -86,7 +97,6 @@
                 <p>100% given tasks completed</p>
             </div>
         </div>
-
     </div>
 
     <!-- NAVIGATION BAR -->
@@ -96,33 +106,33 @@
         <button class="nav-button" onclick="goToHomePage()">
         <i class="fas fa-home"></i>
         <span class="button-text">Home</span>
-     </button>
+    </button>
 
         <!-- Profile Button -->
         <button class="nav-button" onclick="goToProfilePage()">
-     <i class="fas fa-user"></i>
+        <i class="fas fa-user"></i>
         <span class="button-text">Profile</span>
-         </button>
+    </button>
 
         <!-- Add Task Button -->
         <button class="nav-button" onclick="goToAddTaskPage()">
-      <div class="add-task-button">
-        <i class="fas fa-plus"></i>
-        <span class="add-task-text">Add new Task</span>
+        <div class="add-task-button">
+            <i class="fas fa-plus"></i>
+            <span class="add-task-text">Add new Task</span>
         </div>
-     </button>
+    </button>
 
         <!-- Calendar Button -->
         <button class="nav-button" onclick="goToCalendarPage()">
         <i class="fas fa-calendar"></i>
         <span class="button-text">Calendar</span>
-        </button>
+    </button>
 
         <!-- Alert Button -->
         <button class="nav-button" onclick="goToAlertPage()">
-     <i class="fas fa-bell"></i>
-     <span class="alert-text">Alert</span>
-      </button>
+        <i class="fas fa-bell"></i>
+        <span class="alert-text">Alert</span>
+    </button>
 
     </div>
 

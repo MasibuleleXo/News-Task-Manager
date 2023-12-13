@@ -151,10 +151,13 @@ body {
     align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Small shadow below the navigation bar */
     padding: 10px;
     position: fixed;
     bottom: 0;
+    /* Place the navigation bar at the bottom of the screen */
     width: 100%;
+    /* Make the navigation bar full width */
 }
 
 

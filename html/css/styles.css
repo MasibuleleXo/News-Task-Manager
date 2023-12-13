@@ -3,11 +3,65 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1b4;
+    background-color: #f5f3f3;
+}
+
+.header-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Make the header options span the entire width */
 }
 
 
-/* PROFILE CONTAINER */
+/* buttons */
+
+
+/* OPTIONS BUTTONS */
+
+.options-button,
+.settings-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.options-button:hover,
+.settings-button:hover {
+    background-color: #ddd;
+    /* Add a background color on hover for visual feedback */
+}
+
+.options-button {
+    margin-right: auto;
+    /* Push the options button to the left */
+}
+
+
+/*  DROPDOWNs */
+
+.dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #ffffff00;
+    display: none;
+}
+
+.back-button {
+    cursor: pointer;
+    padding: 10px;
+}
 
 .profile-container {
     display: flex;
@@ -35,6 +89,30 @@ body {
     background-color: #fff9f9bb;
 }
 
+.option-button {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.option-button i {
+    margin-right: 10px;
+}
+
+.settings-button {
+    margin-left: auto;
+    /* Push the settings button to the right */
+}
+
+
+/* Style for Font Awesome icons */
+
 i.fas {
     font-size: 20px;
 }
@@ -43,6 +121,27 @@ i.fas {
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
+}
+
+
+/* SETTINGS DROPDOWN */
+
+#settingsDropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    /* Align to the right side of the screen */
+    height: 100%;
+    width: 50%;
+    /* Adjust as needed, considering padding, margin, borders, etc. */
+    background-color: #ffffff;
+    /* Add your desired background color */
+}
+
+#settingsDropdown h1 {
+    margin-left: 20%;
 }
 
 
@@ -396,6 +495,155 @@ i.fas {
 
 .larger-bars .bar {
     height: 100%;
+}
+
+
+/* NAVIGATION BAR */
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Small shadow below the navigation bar */
+    padding: 10px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.nav-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.button-text {
+    font-size: 12px;
+}
+
+.add-task-button:hover .add-task-text {
+    display: block;
+}
+
+.add-task-text {
+    display: none;
+    font-size: 12px;
+}
+
+.alert-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.alert-button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.alert-text {
+    font-size: 12px;
+}
+
+
+/* OPTIONS DROPDOWB___________________OPTIINS DROPDOWN*/
+
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+/* DROPDOWNS */
+
+
+/* .dropdown-container {
+    position: relative;
+} */
+
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s ease-out;
+}
+
+.options-button,
+.settings-button {
+    cursor: pointer;
+}
+
+.user-details h2 {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.user-details,
+p {
+    font-size: 8px;
+    color: #555;
+}
+
+
+/* Adjust the width and styles based on your design preferences */
+
+#optionsDropdown {
+    left: 0;
+    background-color: #ffffffc5;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#settingsDropdown {
+    background-color: #ffffffc5;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.dropdownProfile {
+    padding-top: 50px;
+    background-color: #000;
+    height: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.space {
+    height: 50px;
+    border-top-right-radius: 20px;
+}
+
+.dropdownPicture img {
+    position: inherit;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.profile-contents {
+    padding-top: 1px;
+    /* position: absolute; */
+    display: inline;
 }
 
 

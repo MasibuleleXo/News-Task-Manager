@@ -4,11 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- dropdown javascript -->
+
+    <script>
+        function toggleOptionsDropdown() {
+            var optionsDropdown = document.getElementById("optionsDropdown");
+            var settingsDropdown = document.getElementById("settingsDropdown");
+
+            // Close settingsDropdown if open
+            if (settingsDropdown.style.display === 'block') {
+                settingsDropdown.style.display = 'none';
+            }
+
+            // Toggle the display of optionsDropdown
+            optionsDropdown.style.display = (optionsDropdown.style.display === "block") ? "none" : "block";
+        }
+
+        function toggleSettingsDropdown() {
+            var optionsDropdown = document.getElementById("optionsDropdown");
+            var settingsDropdown = document.getElementById("settingsDropdown");
+
+            // Close optionsDropdown if open
+            if (optionsDropdown.style.display === 'block') {
+                optionsDropdown.style.display = 'none';
+            }
+
+            // Toggle the display of settingsDropdown
+            settingsDropdown.style.display = (settingsDropdown.style.display === "none") ? "block" : "none";
+        }
+
+        function goToHomePage() {
+
+        }
+
+        function goToProfilePage() {
+            window.location.href = "profile.html";
+        }
+
+        function goToAddTaskPage() {
+            // Add logic to navigate to the add task page
+        }
+
+        function goToCalendarPage() {
+            // Add logic to navigate to the calendar page
+        }
+
+        function goToAlertPage() {
+            // Add logic to navigate to the alert page
+        }
+    </script>
 
 
-
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="/html/css/HomePage.css">
+    <link rel="stylesheet" href="/html/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -17,8 +64,113 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <div id="header-section"></div>
+
+    <div class="header-container">
+
+        <div class="header-options">
+            <button class="options-button" onclick="toggleOptionsDropdown()"><i class="fas fa-bars"></i>
+            
+            </button>
+
+            <div class="dropdown" id="optionsDropdown">
+
+                <button class="back-button" onclick="toggleOptionsDropdown()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <!-- OPTIONS BUTTON DROPDOWN -->
+
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <!-- Include the path to the profile image -->
+                        <img src="/pictures/Q-one 20231205_123241.jpg" alt="Profile Image">
+                    </div>
+                    <div class="user-details">
+                        <h2>Quan Dambuza</h2>
+                        <p>quan@pondolandtimes.co.za</p>
+                    </div>
+                </div>
+                <div class="black-container">
+                    <!-- Options for the dropdown -->
+                    <button class="option-button">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-users"></i> Collaboration
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-paperclip"></i> Attachments
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-chart-line"></i> Track Progress
+                    </button>
+                    <button class="option-button">
+                        <i class="far fa-calendar"></i> Due Dates
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-chart-bar"></i> Analysis
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-tasks"></i> Today's Tasks
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-users-cog"></i> Users
+                    </button>
+                </div>
+            </div>
+
+            <button class="settings-button" onclick="toggleSettingsDropdown()"><i class="fas fa-cog"></i>
+                
+            </button>
+
+            <!-- SETTIONGS DROPDOWN -->
+            <div class="splitcontainer">
+
+
+
+            </div>
+            <div class="dropdown" id="settingsDropdown">
+
+                <button class="back-button" onclick="toggleSettingsDropdown()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <h1>Settings</h1>
+                <div class="settings-options">
+                    <button class="option-button">
+                        <i class="fas fa-users-cog"></i> User Preferences
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-bell"></i> Notifications
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-palette"></i> Theme
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-language"></i> Language
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-key"></i> Security
+                    </button>
+                    <button class="option-button">
+                        <i class="fas fa-sync-alt"></i> Sync
+                    </button>
+                    <!-- Add more settings options as needed -->
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
 
 
     <div class="user-info">
@@ -31,8 +183,11 @@
             </div>
         </div>
         <div class="profile-picture">
+            <!-- Assuming you have a profile picture URL -->
             <img src="/pictures/Q-one 20231205_123241.jpg" alt="Profile">
         </div>
+
+
     </div>
     <div class="search-section">
         <input type="text" placeholder="Search tasks...">
@@ -130,8 +285,45 @@
 
 
     <!-- NAVIGATION BAR -->
+    <div class="navigation-bar">
+        <!-- Home Button -->
+        <button class="nav-button" onclick="goToHomePage()">
+        <i class="fas fa-home"></i>
+        <span class="button-text">Home</span>
+    </button>
 
-    <div id="navbar-section"></div>
+        <!-- Profile Button -->
+        <button class="nav-button" onclick="goToProfilePage()">
+        <i class="fas fa-user"></i>
+        <span class="button-text">Profile</span>
+    </button>
+
+        <!-- Add Task Button -->
+        <button class="nav-button" onclick="goToAddTaskPage()">
+        <div class="add-task-button">
+            <i class="fas fa-plus"></i>
+            <span class="add-task-text">Add new Task</span>
+        </div>
+    </button>
+
+        <!-- Calendar Button -->
+        <button class="nav-button" onclick="goToCalendarPage()">
+        <i class="fas fa-calendar"></i>
+        <span class="button-text">Calendar</span>
+    </button>
+
+        <!-- Alert Button -->
+        <button class="nav-button" onclick="goToAlertPage()">
+        <i class="fas fa-bell"></i>
+        <span class="alert-text">Alert</span>
+    </button>
+
+    </div>
+
+
+
+
+
 </body>
 
 </html>
